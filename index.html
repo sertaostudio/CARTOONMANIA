@@ -1,0 +1,1866 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cartoon Classics | Desenhos Clássicos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --bg: #24251f;
+    --panel: #303128;
+    --panel2: #414438;
+    --text: #eee7d8;
+    --muted: #b5ad9c;
+    --yellow: #d0b88e;
+    --purple: #8c795d;
+    --border: rgba(230,220,195,.13);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+}
+
+button, input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* CABEÇALHO — CARTOON-MANIA */
+
+header {
+    height: 76px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(36,37,31,.97);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #e8ddc7;
+}
+
+.logo span {
+    color: #b59b72;
+}
+
+.logo small {
+    display: block;
+    color: #aaa18e;
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-top: -4px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+nav a {
+    color: #d1c8b6;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .25s;
+}
+
+nav a:hover {
+    color: #d0b88e;
+}
+
+.header-fav {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.04);
+    color: #e8ddc7;
+    padding: 10px 17px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    transition: .25s;
+}
+
+.header-fav:hover {
+    background: #514937;
+}
+
+/* BANNER PRINCIPAL */
+
+.hero {
+    min-height: 590px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(8,7,17,.98) 0%,
+            rgba(8,7,17,.88) 30%,
+            rgba(8,7,17,.40) 65%,
+            rgba(8,7,17,.10) 100%),
+        linear-gradient(0deg,
+            #080711 0%,
+            transparent 35%),
+        url('images/fundo-desenho.jpg') center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 580px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #b99cff;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(45px, 6vw, 78px);
+    line-height: .98;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #a987ff;
+}
+
+/* BANNER PRINCIPAL — NOSTALGIA */
+
+.hero {
+    min-height: 620px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(90deg,
+            rgba(36,37,31,.97) 0%,
+            rgba(36,37,31,.87) 28%,
+            rgba(36,37,31,.48) 58%,
+            rgba(36,37,31,.13) 100%),
+
+        linear-gradient(0deg,
+            #24251f 0%,
+            rgba(36,37,31,.15) 35%,
+            transparent 65%),
+
+        url('images/fundo-desenho.jpg') center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #c0a982;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin-bottom: 23px;
+    color: #f0e6d3;
+}
+
+.hero h1 span {
+    color: #c0a982;
+}
+
+.hero p {
+    color: #d1c7b4;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 480px;
+    margin-bottom: 25px;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #e8ddc7;
+    background: rgba(230,220,195,.09);
+    border: 1px solid rgba(230,220,195,.19);
+    padding: 9px 15px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: .5px;
+    margin-left: 0;
+}
+
+/* CATÁLOGO */
+
+main {
+    padding: 35px 5% 75px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    letter-spacing: -.8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+/* PESQUISA */
+
+.search-area {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    background: #171426;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: white;
+    outline: none;
+    padding: 15px 16px 15px 43px;
+    font-size: 13px;
+}
+
+.search-box input:focus {
+    border-color: #9871ff;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    color: var(--muted);
+}
+
+/* CATEGORIAS */
+
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    background: #171426;
+    color: #c5c1d2;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #7040d9;
+    color: white;
+    border-color: #7040d9;
+}
+
+/* TÍTULO DO CATÁLOGO */
+
+.catalog-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.catalog-title h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 23px;
+}
+
+.catalog-title span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* CAPAS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 27px 17px;
+}
+
+.card {
+    min-width: 0;
+    position: relative;
+    cursor: pointer;
+    transition: transform .3s, filter .3s;
+}
+
+.card:hover {
+    transform: scale(1.045);
+    z-index: 3;
+}
+
+.poster {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    border-radius: 8px;
+    background: var(--panel2);
+    border: 1px solid rgba(255,255,255,.09);
+    box-shadow: 0 8px 25px rgba(0,0,0,.25);
+}
+
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .45s;
+}
+
+.card:hover .poster img {
+    transform: scale(1.10);
+}
+
+.poster::after {
+    content: '';
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, rgba(0,0,0,.65));
+    pointer-events: none;
+}
+
+.play-overlay {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(.8);
+    width: 52px;
+    height: 52px;
+    background: white;
+    color: #171020;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: .25s;
+}
+
+.card:hover .play-overlay {
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.year-tag {
+    position: absolute;
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,.75);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.fav-btn {
+    position: absolute;
+    z-index: 4;
+    top: 9px;
+    right: 9px;
+    width: 33px;
+    height: 33px;
+    border: 0;
+    border-radius: 50%;
+    color: white;
+    background: rgba(0,0,0,.75);
+    font-size: 18px;
+}
+
+.fav-btn.active {
+    color: #ff5573;
+}
+
+.card-info {
+    padding: 12px 2px 0;
+}
+
+.card-info h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.card-info p {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.card-info .category-label {
+    color: #ad8aff;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.empty {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 55px 15px;
+    color: var(--muted);
+    background: var(--panel);
+    border-radius: 10px;
+}
+
+/* PLAYER */
+
+.player-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(5,4,12,.97);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.player-modal.show {
+    display: flex;
+}
+
+.player-box {
+    width: min(100%, 1050px);
+    background: #151322;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 25px 100px rgba(0,0,0,.7);
+}
+
+.player-top {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.player-top h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 19px;
+}
+
+.close-player {
+    width: 35px;
+    height: 35px;
+    background: #29263a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.close-player:hover {
+    background: #e34d4d;
+}
+
+.video-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+}
+
+.video-container iframe,
+.video-container video {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.player-bottom {
+    padding: 15px 20px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.player-bottom a {
+    color: #b99cff;
+    text-decoration: none;
+}
+
+.episode-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.episode-controls label {
+    color: #b99cff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.episode-controls select {
+    min-width: 220px;
+    max-width: 100%;
+    padding: 9px 12px;
+    color: white;
+    background: #29263a;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+}
+
+.episode-controls select:focus {
+    border-color: #9871ff;
+}
+
+/* RODAPÉ */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 28px 6%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: var(--muted);
+    font-size: 11px;
+    background: #090812;
+}
+
+footer strong {
+    color: #b99cff;
+}
+
+/* CELULARES */
+
+@media(max-width:700px) {
+    header {
+        height: 66px;
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .hero {
+        min-height: 440px;
+        padding: 45px 6%;
+        background-position: 65% center;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 13px;
+        max-width: 340px;
+    }
+
+    main {
+        padding: 30px 5% 55px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 20px 12px;
+    }
+
+    .card-info h4 {
+        font-size: 14px;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media(max-width:380px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .hero-tag {
+        margin: 12px 0 0;
+    }
+}
+
+@media(max-width:380px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .hero-tag {
+        margin: 12px 0 0;
+    }
+}
+
+/* =====================================================
+   IDENTIDADE VISUAL CARTOON-MANIA
+   AJUSTES VISUAIS SEM ALTERAR FUNCIONALIDADES
+===================================================== */
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+main {
+    background: var(--bg);
+}
+
+.section-heading h2,
+.catalog-title h3 {
+    color: #eee5d4;
+}
+
+.section-heading p,
+.catalog-title span {
+    color: #b5ad9c;
+}
+
+/* Pesquisa */
+
+.search-box input {
+    background: #303128;
+    border-color: var(--border);
+    color: #eee7d8;
+}
+
+.search-box input:focus {
+    border-color: #a58d68;
+}
+
+.search-box input::placeholder {
+    color: #aaa18e;
+}
+
+/* Categorias */
+
+.filter-btn {
+    background: #303128;
+    color: #d1c8b6;
+    border-color: var(--border);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #665740;
+    color: #fff4df;
+    border-color: #806d55;
+}
+
+/* Catálogo */
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.poster {
+    border-radius: 5px;
+    border-color: rgba(230,220,195,.13);
+    background: #414438;
+    box-shadow: 0 8px 22px rgba(0,0,0,.22);
+}
+
+.card-info h4 {
+    color: #eee5d4;
+}
+
+.card-info .category-label {
+    color: #c0a982;
+}
+
+.play-overlay {
+    background: #e5d7bd;
+    color: #29271f;
+}
+
+.year-tag {
+    background: rgba(36,37,31,.85);
+    border-color: rgba(230,220,195,.2);
+    color: #eee5d4;
+}
+
+/* Favoritos */
+
+.fav-btn {
+    background: rgba(36,37,31,.88);
+}
+
+.fav-btn.active {
+    color: #d6a18e;
+}
+
+/* Mensagem sem resultados */
+
+.empty {
+    background: #303128;
+    color: #b5ad9c;
+}
+
+/* Player */
+
+.player-modal {
+    background: rgba(25,26,21,.97);
+}
+
+.player-box {
+    background: #303128;
+    border-color: var(--border);
+}
+
+.close-player {
+    background: #514937;
+}
+
+.close-player:hover {
+    background: #806d55;
+}
+
+.player-bottom a,
+.episode-controls label {
+    color: #c0a982;
+}
+
+.episode-controls select {
+    background: #414438;
+    color: #eee7d8;
+    border-color: var(--border);
+}
+
+.episode-controls select:focus {
+    border-color: #a58d68;
+}
+
+/* Rodapé */
+
+footer {
+    background: #20211c;
+    border-color: var(--border);
+    color: #b5ad9c;
+}
+
+footer strong {
+    color: #c0a982;
+}
+
+/* Celulares */
+
+@media(max-width:700px) {
+
+    .hero {
+        min-height: 480px;
+        padding: 45px 6%;
+
+        background:
+            linear-gradient(90deg,
+                rgba(36,37,31,.93),
+                rgba(36,37,31,.60)),
+            linear-gradient(0deg,
+                #24251f,
+                transparent 50%),
+            url('images/fundo-desenho.jpg') 65% center/cover no-repeat;
+    }
+
+    .hero h1 {
+        font-size: clamp(39px, 10vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+}
+
+</style>
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        CARTOON<span>MANIA</span>
+        <small>UMA VIAGEM PELA NOSTALGIA</small>
+    </div>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#categorias">Categorias</a>
+
+        <button class="header-fav" onclick="showFavorites()">
+            ♥ Favoritos
+        </button>
+    </nav>
+</header>
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            UMA COLEÇÃO DE GRANDES MEMÓRIAS
+        </div>
+
+        <h1>
+            DESENHOS QUE<br>
+            <span>VIVEM</span> NA<br>
+            MEMÓRIA.
+        </h1>
+
+        <p>
+            Uma viagem pelos desenhos que marcaram nossa infância.
+            Relembre personagens inesquecíveis, aventuras,
+            histórias e momentos que continuam vivos no tempo.
+        </p>
+
+        <span class="hero-tag">
+            ✦ Uma coleção de clássicos
+        </span>
+
+    </div>
+
+</section>
+
+<main id="catalogo">
+
+    <div class="section-heading">
+        <div>
+            <h2>Explore nosso acervo</h2>
+            <p>Encontre seus desenhos favoritos e reviva grandes histórias.</p>
+        </div>
+    </div>
+
+    <div class="search-area">
+        <div class="search-box">
+            <span class="search-icon">⌕</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar desenho, Desenhos ou filme..."
+                oninput="renderCards()"
+            >
+        </div>
+    </div>
+
+    <div class="filters" id="categorias">
+        <button class="filter-btn active" data-category="Todos">Todos</button>
+        <button class="filter-btn" data-category="Desenhos">Desenhos</button>
+        <button class="filter-btn" data-category="Séries">Séries</button>
+        <button class="filter-btn" data-category="Filmes">Filmes</button>
+        <button class="filter-btn" data-category="Favoritos">♥ Favoritos</button>
+    </div>
+
+    <div class="catalog-title">
+        <h3 id="catalogHeading">Todos os clássicos</h3>
+        <span id="resultCount"></span>
+    </div>
+
+    <div class="grid" id="cartoonGrid"></div>
+
+</main>
+
+<footer>
+    <div><strong>CARTOONCLASSICS</strong> — A nostalgia nunca envelhece.</div>
+    <div>Acervo de animações lançadas até 1999.</div>
+</footer>
+
+<!-- JANELA DO PLAYER -->
+
+<div class="player-modal" id="playerModal" onclick="outsideClose(event)">
+    <div class="player-box">
+        <div class="player-top">
+            <h3 id="playerTitle">Assistindo agora</h3>
+            <button class="close-player" onclick="closePlayer()">×</button>
+        </div>
+
+        <div class="video-container" id="videoContainer"></div>
+
+        <div class="player-bottom">
+            <div class="episode-controls">
+                <label for="episodeSelect">EPISÓDIOS DESTA SÉRIE</label>
+                <select id="episodeSelect" onchange="changeEpisode(this.value)"></select>
+            </div>
+            <span id="nextStatus">Ao terminar, o próximo episódio da mesma série será reproduzido automaticamente quando compatível.</span>
+            <br>
+            <a id="openYoutube" href="#" target="_blank" rel="noopener">
+                Abrir vídeo diretamente no YouTube ↗
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+
+// =====================================================
+// CATÁLOGO DE DESENHOS
+// =====================================================
+// PARA ADICIONAR EPISÓDIOS:
+// 1. Copie um objeto completo e cole antes do fechamento ];.
+// 2. Use um id que ainda não exista.
+// 3. Repita exatamente o mesmo campo "series" para agrupar os episódios.
+// 4. Preencha season e episode para ordenar por temporada e episódio.
+// 5. Compartilhe o vídeo no Google Drive com acesso para quem tiver o link.
+//
+// Exemplo:
+// {
+//     id: 13,
+//     title: "Aventura na floresta",
+//     series: "Meu Desenho",
+//     season: 1,
+//     episode: 1,
+//     year: "1998",
+//     category: "Séries",
+//     description: "Primeiro episódio.",
+//     video: "https://drive.google.com/file/d/ID_DO_ARQUIVO/view"
+// },
+
+const cartoons = [
+
+    {
+        id: 6,
+        title: " O Mascara",
+        year: "1989",
+        season: 1,
+        episode: 1,
+        category: "Desenhos",
+        cover: "images/O-Mascara-.jpg",
+        description: "As batalhas de Goku e os guerreiros Z.",
+        video: "https://drive.google.com/file/d/1X9MNkkQ_e-2BzjmlFOW-O0_dFK74zsGt/view"
+    },
+
+    {
+        id: 7,
+        title: " O Mascara",
+        year: "1989",
+        season: 1,
+        episode: 2,
+        category: "Desenhos",
+        cover: "images/O-Mascara-.jpg",
+        description: "As batalhas de Goku e os guerreiros Z.",
+        video: "https://drive.google.com/file/d/1NPJuxMux8FJYpCwemwsKPYpcOu64GWmH/view"
+    },
+
+    {
+        id: 8,
+        title: "Dragon Ball Z - A Saga Saiyajin",
+        year: "1992",
+        category: "Filmes",
+        description: "As aventuras sobrenaturais de Yusuke Urameshi.",
+        video: "https://www.youtube.com/watch?v=cb8c0tgX8As"
+    },
+
+    {
+        id: 11,
+        title: "Cinderela",
+        year: "Clássico",
+        category: "Filmes",
+        cover: "images/Cinderela.jpg",
+        description: "Filme adicionado à coleção pelo Google Drive.",
+        video: "https://drive.google.com/file/d/1w2ANEPqIUdhH28509m6cSKmVUsmLaygC/view"
+    },
+
+    {
+        id: 12,
+        title: "Pinoquio",
+        year: "Clássico",
+        category: "Filmes",
+        cover: "images/Pinoquio.jpg",
+        description: "Filme adicionado à coleção pelo Google Drive.",
+        video: "https://drive.google.com/file/d/12N04jplO4NAjYdo6IfEjxRLroE0tDdIk/view"
+    },
+{
+    id: 13,
+    title: "Elefante — Parte 1",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 1,
+    year: "2000",
+    category: "Séries",
+    description: "Elefante — Parte 1",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1mvFHtu21KI4rWHT8w3ozgO9XQGlwo7qP/view"
+},
+
+{
+    id: 14,
+    title: "Elefante — Parte 2",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 2,
+    year: "2000",
+    category: "Séries",
+    description: "Elefante — Parte 2",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1192J1pQUpInjdBXVonDKoC440ASOHmU2/view"
+},
+
+{
+    id: 15,
+    title: "Fora De Vista — Parte 1",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 3,
+    year: "2000",
+    category: "Séries",
+    description: "Fora De Vista — Parte 1",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1PuifIyKIW1mdQxi8BA2s-qd-61CmVlX6/view"
+},
+
+{
+    id: 16,
+    title: "Fora De Vista — Parte 2",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 4,
+    year: "2000",
+    category: "Séries",
+    description: "Fora De Vista — Parte 2",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1UKNYgC0qSzVAQX3Mla_hKwMAxPi8MnN6/view"
+},
+
+{
+    id: 17,
+    title: "O Dente — Parte 1",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 5,
+    year: "2000",
+    category: "Séries",
+    description: "O Dente — Parte 1",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1UCKD8VndnUxqRxbO5HSnavFgXHhpKUPO/view"
+},
+
+{
+    id: 18,
+    title: "O Dente — Parte 2",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 6,
+    year: "2000",
+    category: "Séries",
+    description: "O Dente — Parte 2",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1IeSZmDEsVOmQDqf8FdCRQnlxWDc9gXOP/view"
+},
+
+{
+    id: 19,
+    title: "Perdendo Sam Parte 1",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 7,
+    year: "2000",
+    category: "Séries",
+    description: "Perdendo Sam Parte 1",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1HvhjHVZ_lWu0uNOQG92sxXzVz1jzxUzZ/view"
+},
+
+{
+    id: 20,
+    title: "Perdendo Sam Parte 2",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 8,
+    year: "2000",
+    category: "Séries",
+    description: "Perdendo Sam Parte 2",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1XbMH33BTQeb4tGjerAE40PGx3j1TAS1X/view"
+},
+
+{
+    id: 21,
+    title: "Todas As Bolas De Gude Parte 1",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 9,
+    year: "2000",
+    category: "Séries",
+    description: "Todas As Bolas De Gude Parte 1",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/16HvoLeiRufX9qQ9hutYPJipLWPfGYTwO/view"
+},
+
+{
+    id: 22,
+    title: "Todas As Bolas De Gude Parte 2",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 10,
+    year: "2000",
+    category: "Séries",
+    description: "Todas As Bolas De Gude Parte 2",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1UVyCnPFWOwz7rCHbr1Sl6iQohjnFSXqq/view"
+},
+
+{
+    id: 23,
+    title: "O Grande Jogo Parte 1",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 11,
+    year: "2000",
+    category: "Séries",
+    description: "O Grande Jogo Parte 1",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/1X3g6k5r7J8x9Q2F4G5H6I7J8K9L0M1N2/view"
+},
+
+{
+    id: 24,
+    title: "Uma Paixão Parte 1",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 12,
+    year: "2000",
+    category: "Séries",
+    description: "Uma Paixão Parte 1",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/11wjhgEf_qLgWvyg5Y44L3Wjz3GqKk1B6/view"
+},
+
+{
+    id: 25,
+    title: "Uma Paixão Parte 2",
+    series: "Os Sete Monstrinhos",
+    season: 1,
+    episode: 13,
+    year: "2000",
+    category: "Séries",
+    description: "Uma Paixão Parte 2",
+    cover: "images/sete_monstrinhos.jpg",
+    video: "https://drive.google.com/file/d/15OzM1eze_KNOvqkHJNtqozVnipny3cIu/view"
+},
+
+{
+    id: 26,
+    title: "O Recheio da Torta",
+    series: "As Aventuras de Piggley Winks",
+    season: 1,
+    episode: 1,
+    year: "2000",
+    category: "Séries",
+    description: "As Aventuras de Piggley Winks",
+    cover: "images/As Aventuras de Piggley Winks.jpg",
+    video: "https://drive.google.com/file/d/14XFaXlxsy_KOlPkiaGjmjnn-7PBYi_Hd/view"
+},
+
+{
+    id: 27,
+    title: "O Salmão da Sabedoria",
+    series: "As Aventuras de Piggley Winks",
+    season: 1,
+    episode: 2,
+    year: "2000",
+    category: "Séries",
+    description: "As Aventuras de Piggley Winks",
+    cover: "images/As Aventuras de Piggley Winks.jpg",
+    video: "https://drive.google.com/file/d/18tXswBiTY6b1xGyPgt3WTQ6YeB6r75X1/view"
+},
+
+{
+    id: 28,
+    title: "O Mascara contra ataca",
+    series: "O Mascara",
+    season: 1,
+    episode: 1,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1X9MNkkQ_e-2BzjmlFOW-O0_dFK74zsGt/view"
+},
+
+{
+    id: 29,
+    title: "O Mascara contra ataca Parte 2",
+    series: "O Mascara",
+    season: 1,
+    episode: 2,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1NPJuxMux8FJYpCwemwsKPYpcOu64GWmH/view"
+},
+
+{
+    id: 30,
+    title: "Segure Este Bebê",
+    series: "O Mascara",
+    season: 1,
+    episode: 3,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1JcyUc7fxwncUReLC_WqhH6sCHFaMliPG/view"
+},
+
+{
+    id: 31,
+    title: "Os Mutantes",
+    series: "O Mascara",
+    season: 1,
+    episode: 4,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1neC8m5hnDEysa-vr8QD79K6B6Q61hzh4/view"
+},
+
+{
+    id: 32,
+    title: "Mascara Quase perfeita",
+    series: "O Mascara",
+    season: 1,
+    episode: 5,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1JPcYIu7IFuZgBGZH2_BwjNq7dzrXY2cR/view"
+},
+
+{
+    id: 33,
+    title: "Ladão De Sombras",
+    series: "O Mascara",
+    season: 1,
+    episode: 6,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1QtGMDscZReippsTYMEZfEnuhii5gl6tN/view"
+},
+
+{
+    id: 34,
+    title: "A noiva de Petrorius",
+    series: "O Mascara",
+    season: 1,
+    episode: 7,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1TSyg5DYfXPAdqwv00mjn76zjbG0n-sc5/view"
+},
+
+{
+    id: 35,
+    title: "Aventuras Psicológicas",
+    series: "O Mascara",
+    season: 1,
+    episode: 8,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1gcv-wj5GDIL2OXXclj3kMbjsnod1WegF/view"
+},
+
+{
+    id: 36,
+    title: "Terapia lá mascara",
+    series: "O Mascara",
+    season: 1,
+    episode: 9,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1v0hdB_hzfgIq3sBQW_8BIdmEBq4_Sm8R/view"
+},
+
+{
+    id: 37,
+    title: "O Mascara de Prefeito",
+    series: "O Mascara",
+    season: 1,
+    episode: 10,
+    year: "2000",
+    category: "Séries",
+    description: "O Mascara",
+    cover: "images/O-Mascara-.jpg",
+    video: "https://drive.google.com/file/d/1F4-qzvh0RHXxYL3ZAQ0pC1-D-B1Z3Rdi/view"
+},
+    
+];
+
+// =====================================================
+// CONFIGURAÇÕES
+// =====================================================
+
+let activeCategory = "Todos";
+// Leitura segura: alguns navegadores restringem localStorage em arquivos abertos
+// diretamente pelo computador (file://). Nesse caso, o catálogo continua funcionando.
+let favorites = [];
+try {
+    const savedFavorites = localStorage.getItem("cartoonFavorites");
+    favorites = savedFavorites ? JSON.parse(savedFavorites) : [];
+    if (!Array.isArray(favorites)) favorites = [];
+} catch (error) {
+    favorites = [];
+}
+
+// Controle da reprodução automática entre desenhos da mesma categoria.
+let currentCartoonId = null;
+let ytPlayer = null;
+let youtubeApiReady = false;
+let pendingYoutubeId = null;
+
+// Miniaturas automáticas do YouTube
+function getYoutubeId(url) {
+    try {
+        const parsed = new URL(url);
+
+        if (parsed.hostname.includes("youtu.be")) {
+            return parsed.pathname.slice(1);
+        }
+
+        if (parsed.pathname.includes("/embed/")) {
+            return parsed.pathname.split("/embed/")[1];
+        }
+
+        return parsed.searchParams.get("v");
+    } catch (error) {
+        return null;
+    }
+}
+
+function getThumbnail(url) {
+    const id = getYoutubeId(url);
+
+    if (!id) {
+        return "https://placehold.co/640x360/20212a/ffc928?text=Cartoon+Classics";
+    }
+
+    return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+}
+
+// =====================================================
+// MOSTRAR DESENHOS
+// =====================================================
+
+function getSeriesName(cartoon) {
+    return cartoon.series || cartoon.title;
+}
+
+function getSeriesEpisodes(cartoon) {
+    const seriesName = getSeriesName(cartoon);
+    return cartoons
+        .filter(item => getSeriesName(item) === seriesName)
+        .sort((a, b) =>
+            (Number(a.season) || 1) - (Number(b.season) || 1) ||
+            (Number(a.episode) || a.id) - (Number(b.episode) || b.id)
+        );
+}
+
+function renderCards() {
+    const grid = document.getElementById("cartoonGrid");
+    const search = document.getElementById("searchInput").value.toLowerCase();
+
+    let filtered = cartoons.filter(cartoon => {
+        const matchesSearch =
+            cartoon.title.toLowerCase().includes(search) ||
+            cartoon.description.toLowerCase().includes(search) ||
+            getSeriesName(cartoon).toLowerCase().includes(search);
+
+        const matchesCategory =
+            activeCategory === "Todos" ||
+            (activeCategory === "Favoritos" && favorites.includes(cartoon.id)) ||
+            cartoon.category === activeCategory;
+
+        return matchesSearch && matchesCategory;
+    });
+
+    // Uma série aparece apenas uma vez no catálogo, mesmo que tenha vários episódios.
+    const grouped = new Map();
+    filtered.forEach(episode => {
+        const key = getSeriesName(episode);
+        if (!grouped.has(key)) grouped.set(key, episode);
+    });
+
+    const seriesCards = [...grouped.values()];
+
+    document.getElementById("resultCount").textContent =
+        `${seriesCards.length} série(s) / filme(s)`;
+
+    document.getElementById("catalogHeading").textContent =
+        activeCategory === "Todos" ? "Todos os clássicos" : activeCategory;
+
+    if (seriesCards.length === 0) {
+        grid.innerHTML = `
+            <div class="empty">
+                <h3>Nenhum desenho encontrado</h3>
+                <p>Tente pesquisar por outro nome.</p>
+            </div>
+        `;
+        return;
+    }
+
+    grid.innerHTML = seriesCards.map(cartoon => {
+        const episodes = getSeriesEpisodes(cartoon);
+        const isFavorite = episodes.some(item => favorites.includes(item.id));
+        const episodeLabel = episodes.length === 1
+            ? "1 episódio"
+            : `${episodes.length} episódios`;
+
+        return `
+            <article class="card" onclick="openPlayer(${episodes[0].id})">
+                <div class="poster">
+                    <img
+                        src="${cartoon.cover || getThumbnail(cartoon.video)}"
+                        alt="${getSeriesName(cartoon)}"
+                        loading="lazy"
+                        onerror="this.src='https://placehold.co/640x360/20212a/ffc928?text=Cartoon+Classics'"
+                    >
+                    <span class="year-tag">${cartoon.year}</span>
+                    <button
+                        class="fav-btn ${isFavorite ? "active" : ""}"
+                        onclick="toggleSeriesFavorite(event, '${String(getSeriesName(cartoon)).replace(/'/g, "\\'")}')"
+                        title="Adicionar série aos favoritos"
+                    >${isFavorite ? "♥" : "♡"}</button>
+                    <div class="play-overlay">▶</div>
+                </div>
+                <div class="card-info">
+                    <h4>${getSeriesName(cartoon)}</h4>
+                    <p>
+                        <span class="category-label">${cartoon.category}</span>
+                        • ${episodeLabel}
+                    </p>
+                </div>
+            </article>
+        `;
+    }).join("");
+}
+
+function toggleSeriesFavorite(event, seriesName) {
+    event.stopPropagation();
+    const episodes = cartoons.filter(item => getSeriesName(item) === seriesName);
+    const allFavorite = episodes.every(item => favorites.includes(item.id));
+
+    if (allFavorite) {
+        favorites = favorites.filter(id => !episodes.some(item => item.id === id));
+    } else {
+        episodes.forEach(item => {
+            if (!favorites.includes(item.id)) favorites.push(item.id);
+        });
+    }
+
+    try {
+        localStorage.setItem("cartoonFavorites", JSON.stringify(favorites));
+    } catch (error) {
+        // Favoritos não serão persistidos neste navegador, mas a página continua funcionando.
+    }
+    renderCards();
+}
+
+// =====================================================
+// FILTROS
+// =====================================================
+
+document.querySelectorAll(".filter-btn").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        document.querySelectorAll(".filter-btn").forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+        activeCategory = button.dataset.category;
+
+        renderCards();
+
+    });
+
+});
+
+// =====================================================
+// FAVORITOS
+// =====================================================
+
+function toggleFavorite(event, id) {
+
+    event.stopPropagation();
+
+    if (favorites.includes(id)) {
+        favorites = favorites.filter(item => item !== id);
+    } else {
+        favorites.push(id);
+    }
+
+    try {
+        localStorage.setItem("cartoonFavorites", JSON.stringify(favorites));
+    } catch (error) {
+        // Favoritos não serão persistidos neste navegador, mas a página continua funcionando.
+    }
+
+    renderCards();
+
+}
+
+function showFavorites() {
+
+    activeCategory = "Favoritos";
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.toggle(
+            "active",
+            btn.dataset.category === "Favoritos"
+        );
+    });
+
+    renderCards();
+    scrollCatalog();
+
+}
+
+// =====================================================
+// PLAYER DE VÍDEO
+// =====================================================
+
+function openPlayer(id) {
+
+    const cartoon = cartoons.find(item => item.id === id);
+
+    if (!cartoon || !cartoon.video) {
+        alert("Este desenho ainda não possui um vídeo cadastrado.");
+        return;
+    }
+
+    currentCartoonId = id;
+
+    const seriesEpisodes = getSeriesEpisodes(cartoon);
+    const episodeSelect = document.getElementById("episodeSelect");
+    episodeSelect.innerHTML = seriesEpisodes.map(item => {
+        const seasonText = item.season ? `Temporada ${item.season} — ` : "";
+        const episodeText = item.episode ? `Episódio ${item.episode}` : item.title;
+        return `<option value="${item.id}" ${item.id === id ? "selected" : ""}>${seasonText}${episodeText}: ${item.title}</option>`;
+    }).join("");
+
+    const container = document.getElementById("videoContainer");
+    document.getElementById("playerTitle").textContent = cartoon.title;
+    document.getElementById("nextStatus").textContent =
+        "Ao terminar, o próximo episódio desta série será reproduzido automaticamente quando compatível."
+
+    if (ytPlayer && typeof ytPlayer.destroy === "function") {
+        ytPlayer.destroy();
+        ytPlayer = null;
+    }
+
+    const youtubeId = getYoutubeId(cartoon.video);
+
+    if (youtubeId) {
+
+        pendingYoutubeId = youtubeId;
+        container.innerHTML = `
+            <div id="youtubePlayer" style="width:100%;height:100%;"></div>
+        `;
+
+        if (youtubeApiReady && window.YT && window.YT.Player) {
+            createYoutubePlayer();
+        } else {
+            document.getElementById("nextStatus").textContent =
+                "Carregando vídeo... A sequência automática será iniciada quando o player estiver pronto.";
+        }
+
+        document.getElementById("openYoutube").href = cartoon.video;
+        document.getElementById("openYoutube").textContent =
+            "Abrir vídeo diretamente no YouTube ↗";
+
+    } else if (cartoon.video.includes("drive.google.com")) {
+
+        pendingYoutubeId = null;
+        const driveId = getDriveId(cartoon.video);
+
+        if (!driveId) {
+            alert("Não foi possível identificar o arquivo do Google Drive.");
+            return;
+        }
+
+        container.innerHTML = `
+            <iframe
+                src="https://drive.google.com/file/d/${driveId}/preview"
+                allow="autoplay"
+                allowfullscreen
+            ></iframe>
+        `;
+
+        document.getElementById("nextStatus").textContent =
+            "A sequência automática é compatível com vídeos do YouTube. O Google Drive não informa ao site quando o vídeo termina.";
+        document.getElementById("openYoutube").href = cartoon.video;
+        document.getElementById("openYoutube").textContent = "Abrir vídeo original ↗";
+
+    } else {
+
+        pendingYoutubeId = null;
+        container.innerHTML = `
+            <video controls autoplay>
+                <source src="${cartoon.video}" type="video/mp4">
+                Seu navegador não suporta este vídeo.
+            </video>
+        `;
+
+        document.getElementById("nextStatus").textContent =
+            "A sequência automática está configurada para vídeos do YouTube.";
+        document.getElementById("openYoutube").href = cartoon.video;
+        document.getElementById("openYoutube").textContent = "Abrir vídeo original ↗";
+
+    }
+
+    document.getElementById("playerModal").classList.add("show");
+    document.body.style.overflow = "hidden";
+}
+
+function changeEpisode(value) {
+    const id = Number(value);
+    if (id && id !== currentCartoonId) openPlayer(id);
+}
+
+function createYoutubePlayer() {
+
+    if (!pendingYoutubeId || !window.YT || !window.YT.Player) return;
+
+    if (ytPlayer && typeof ytPlayer.destroy === "function") {
+        ytPlayer.destroy();
+        ytPlayer = null;
+    }
+
+    ytPlayer = new YT.Player("youtubePlayer", {
+        videoId: pendingYoutubeId,
+        playerVars: {
+            autoplay: 1,
+            rel: 0,
+            playsinline: 1
+        },
+        events: {
+            onStateChange: onYoutubePlayerStateChange,
+            onError: function() {
+                document.getElementById("nextStatus").textContent =
+                    "Este vídeo não pôde ser reproduzido aqui. Tente abri-lo diretamente no YouTube.";
+            }
+        }
+    });
+}
+
+function onYoutubePlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        playNextInCategory();
+    }
+}
+
+function playNextInCategory() {
+
+    const current = cartoons.find(item => item.id === currentCartoonId);
+    if (!current) return;
+
+    const sameSeries = getSeriesEpisodes(current).filter(item => item.video);
+
+    if (sameSeries.length <= 1) {
+        document.getElementById("nextStatus").textContent =
+            "Não há outro episódio cadastrado nesta série.";
+        return;
+    }
+
+    const currentIndex = sameSeries.findIndex(item => item.id === currentCartoonId);
+    const nextIndex = (currentIndex + 1) % sameSeries.length;
+    const nextCartoon = sameSeries[nextIndex];
+
+    document.getElementById("nextStatus").textContent =
+        "Próximo: " + nextCartoon.title + " — iniciando automaticamente...";
+
+    setTimeout(() => {
+        if (document.getElementById("playerModal").classList.contains("show")) {
+            openPlayer(nextCartoon.id);
+        }
+    }, 900);
+}
+
+function getDriveId(url) {
+
+    const match = url.match(/\/file\/d\/([^/]+)/);
+
+    if (match) return match[1];
+
+    try {
+        return new URL(url).searchParams.get("id");
+    } catch (error) {
+        return null;
+    }
+
+}
+
+function closePlayer() {
+
+    document.getElementById("playerModal").classList.remove("show");
+
+    if (ytPlayer && typeof ytPlayer.destroy === "function") {
+        ytPlayer.destroy();
+        ytPlayer = null;
+    }
+
+    pendingYoutubeId = null;
+    currentCartoonId = null;
+    document.getElementById("videoContainer").innerHTML = "";
+    document.body.style.overflow = "";
+
+}
+
+function outsideClose(event) {
+
+    if (event.target.id === "playerModal") {
+        closePlayer();
+    }
+
+}
+
+// =====================================================
+// NAVEGAÇÃO
+// =====================================================
+
+function scrollCatalog() {
+    document.getElementById("catalogo").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+// Fecha o player com ESC
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closePlayer();
+    }
+});
+
+// Carrega a API oficial do YouTube para detectar quando cada vídeo termina.
+window.onYouTubeIframeAPIReady = function() {
+    youtubeApiReady = true;
+
+    if (pendingYoutubeId &&
+        document.getElementById("playerModal").classList.contains("show")) {
+        createYoutubePlayer();
+    }
+};
+
+const youtubeApiScript = document.createElement("script");
+youtubeApiScript.src = "https://www.youtube.com/iframe_api";
+document.head.appendChild(youtubeApiScript);
+
+// Inicializa o catálogo
+renderCards();
+
+</script>
+
+</body>
+</html>
